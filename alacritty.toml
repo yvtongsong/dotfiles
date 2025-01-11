@@ -1,0 +1,24 @@
+[terminal.shell]
+program = "C:\\Windows\\System32\\wsl.exe"
+args = ["--cd", "~"]
+
+[window]
+
+padding.x = 10
+padding.y = 10
+
+dimensions = { columns = 120, lines = 30}
+position = { x = 900, y = 500 }
+
+dynamic_title = false
+
+opacity = 0.9
+
+[font]
+
+normal.family = "Consolas"
+bold.family = "Consolas"
+italic.family = "Consolas"
+bold_italic.family = "Consolas"
+
+size = 15.0
