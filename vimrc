@@ -4,8 +4,8 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set showmatch
+set autochdir
 
-set laststatus=2
 set hls
 
 filetype plugin indent on
@@ -38,7 +38,19 @@ else
 endif
 
 nnoremap <C-n> :set rnu!<CR>
+noremap <C-c> "+y
+noremap <C-v> "+p
 
-call plug#begin('~/.vim/java-syntax')
+"call plug#begin('~/.vim/java-syntax.vim')
+"Plug 'uiiaoo/java-syntax.vim'
+"call plug#end()
+"
+"call plug#begin('~/.vim/emmet-vim')
+"Plug 'mattn/emmet-vim'
+"call plug#end()
+
+
+call plug#begin('~/.vim/plugged')
 Plug 'uiiaoo/java-syntax.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
