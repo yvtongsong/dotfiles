@@ -1,7 +1,3 @@
-F1::
-Send, <br>
-return
-
 g_LastCtrlKeyDownTime := 0
 g_AbortSendEsc := false
 g_ControlRepeatDetected := false
@@ -12,7 +8,7 @@ g_ControlRepeatDetected := false
         return
     }
 
-    ; 如果 Caps Lock 灯亮，强制关闭它
+    ; turn off caps
     SetCapsLockState, Off
 
     send,{Ctrl down}
