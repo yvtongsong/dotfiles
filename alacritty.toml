@@ -4,13 +4,14 @@ args = ["--cd", "~"]
 
 [window]
 
+title = "alacritty"
+dynamic_title = false
+
 padding.x = 10
 padding.y = 10
 
 dimensions = { columns = 120, lines = 30}
 position = { x = 900, y = 500 }
-
-dynamic_title = false
 
 opacity = 0.9
 
