@@ -1,4 +1,6 @@
 syntax on
+set t_Co=256
+set termguicolors
 
 set autoindent
 set tabstop=4
@@ -38,19 +40,24 @@ else
 endif
 
 nnoremap <C-n> :set rnu!<CR>
-noremap <C-c> "+y
-noremap <C-v> "+p
+vnoremap <C-y> "+y
+nnoremap <C-p> "+p
 
-"call plug#begin('~/.vim/java-syntax.vim')
-"Plug 'uiiaoo/java-syntax.vim'
-"call plug#end()
-"
-"call plug#begin('~/.vim/emmet-vim')
-"Plug 'mattn/emmet-vim'
-"call plug#end()
+nnoremap <space>d :Ex<CR>
 
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 call plug#begin('~/.vim/plugged')
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'mattn/emmet-vim'
+Plug 'vim-python/python-syntax'
+Plug 'morhetz/gruvbox'
 call plug#end()
+
+autocmd vimenter * ++nested colorscheme gruvbox
+
+let g:python_highlight_space_errors = 0
+let g:python_highlight_all = 1
