@@ -72,9 +72,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-plugins=(tmux)
-ZSH_TMUX_AUTOSTART=true
-
 plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
@@ -110,6 +107,17 @@ eval "$(zoxide init zsh)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export http_proxy=localhost:7890
+export https_proxy=localhost:7890
+
+
+#pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+alias rm="echo Use 'del', or the full path i.e. '/bin/rm'"
