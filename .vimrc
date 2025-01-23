@@ -9,6 +9,12 @@ set shiftwidth=4
 set showmatch
 set autochdir
 
+augroup CursorLineOnlyInActiveWindow
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
+
 set hls
 
 filetype plugin indent on
