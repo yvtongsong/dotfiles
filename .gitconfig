@@ -1,0 +1,7 @@
+[user]
+	name = Yutong Song
+	email = yutong.s@outlook.com
+[alias]
+	st = status
+[init "default"]
+	Branch = master
