@@ -4,8 +4,8 @@ set termguicolors
 set background=dark
 
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set showmatch
 set autochdir
 
@@ -32,6 +32,7 @@ vnoremap <C-y> "+y
 nnoremap <C-p> "+p
 
 nnoremap <space>d :Ex<CR>
+nnoremap <space>f :BufExplorer<CR>
 
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -43,6 +44,7 @@ Plug 'uiiaoo/java-syntax.vim'
 Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'morhetz/gruvbox'
+Plug 'jlanzarotta/bufexplorer'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
