@@ -45,9 +45,15 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-python/python-syntax'
 Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:python_highlight_space_errors = 0
 let g:python_highlight_all = 1
+
+let g:ale_linters = {
+\   'rust': ['analyzer', 'cargo'],
+\}
+let g:ale_rust_cargo_use_clippy = 1
