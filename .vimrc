@@ -49,6 +49,10 @@ Plug 'dense-analysis/ale'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
+" Workaround for creating transparent bg
+autocmd SourcePost * highlight Normal     ctermbg=NONE guibg=NONE
+			\ |    highlight LineNr     ctermbg=NONE guibg=NONE
+			\ |    highlight SignColumn ctermbg=NONE guibg=NONE
 
 let g:python_highlight_space_errors = 0
 let g:python_highlight_all = 1
@@ -57,3 +61,6 @@ let g:ale_linters = {
 \   'rust': ['analyzer', 'cargo'],
 \}
 let g:ale_rust_cargo_use_clippy = 1
+
+autocmd FileType * let b:ale_enabled = 0
+autocmd FileType rust let b:ale_enabled = 1
