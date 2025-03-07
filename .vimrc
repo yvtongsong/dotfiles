@@ -9,6 +9,9 @@ set shiftwidth=2
 set showmatch
 set autochdir
 
+set timeoutlen=1000
+set ttimeoutlen=5
+
 augroup CursorLineOnlyInActiveWindow
     autocmd!
     autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -40,12 +43,13 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 call plug#begin('~/.vim/plugged')
-Plug 'uiiaoo/java-syntax.vim'
-Plug 'mattn/emmet-vim'
-Plug 'vim-python/python-syntax'
+"Plug 'uiiaoo/java-syntax.vim'
+"Plug 'mattn/emmet-vim'
+"Plug 'vim-python/python-syntax'
 Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
@@ -64,3 +68,7 @@ let g:ale_rust_cargo_use_clippy = 1
 
 autocmd FileType * let b:ale_enabled = 0
 autocmd FileType rust let b:ale_enabled = 1
+
+source ~/.vim/coc-config.vim
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
