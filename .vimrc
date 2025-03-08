@@ -10,7 +10,14 @@ set showmatch
 set autochdir
 
 set timeoutlen=1000
-set ttimeoutlen=5
+set ttimeoutlen=1
+
+command! Q q
+command! W w
+command! Wq wq
+command! WQ wq
+command! Qa qa
+command! QA qa
 
 augroup CursorLineOnlyInActiveWindow
     autocmd!
@@ -68,7 +75,5 @@ let g:ale_rust_cargo_use_clippy = 1
 
 autocmd FileType * let b:ale_enabled = 0
 autocmd FileType rust let b:ale_enabled = 1
-
-source ~/.vim/coc-config.vim
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
