@@ -57,6 +57,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
 "Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
