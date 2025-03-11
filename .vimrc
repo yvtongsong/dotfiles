@@ -1,7 +1,9 @@
+source ~/.vim/coc-example-config.vim
+
 syntax on
 set t_Co=256
 set termguicolors
-set background=dark
+" set background=dark
 
 set autoindent
 set tabstop=2
@@ -12,7 +14,7 @@ set autochdir
 set timeoutlen=1000
 set ttimeoutlen=1
 
-command! Q q
+command! Q q!
 command! W w
 command! Wq wq
 command! WQ wq
@@ -78,3 +80,6 @@ autocmd FileType * let b:ale_enabled = 0
 autocmd FileType rust let b:ale_enabled = 1
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+set fileformat=unix
+autocmd BufRead,BufNewFile * setlocal fileformat=unix
