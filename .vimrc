@@ -3,7 +3,7 @@ source ~/.vim/coc-example-config.vim
 syntax on
 set t_Co=256
 set termguicolors
-" set background=dark
+set background=dark
 
 set autoindent
 set tabstop=2
@@ -59,7 +59,7 @@ Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
 "Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
