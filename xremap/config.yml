@@ -4,3 +4,5 @@ modmap:
       CapsLock:
         held: Ctrl_L
         alone: Esc
+      Shift_R: Up
+      Up: Shift_R
