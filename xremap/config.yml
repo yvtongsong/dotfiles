@@ -1,8 +1,13 @@
 modmap:
-  - name: Global
+  - name: "Global remap"
     remap:
       CapsLock:
         held: Ctrl_L
         alone: Esc
+
+  - name: "Device-specific remap"
+    device:
+      only: "AT Translated Set 2 keyboard"
+    remap:
       Shift_R: Up
       Up: Shift_R
