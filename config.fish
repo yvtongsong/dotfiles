@@ -13,17 +13,10 @@ end
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 bass source "$HOME/.cargo/env"
-bass export PATH="$HOME/anaconda3/bin:$PATH"
-bass source /tools/Xilinx/Vitis/2024.2/settings64.sh
-bass export ELECTRON_OZONE_PLATFORM_HINT=auto
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-set -x SDKMAN_DIR $HOME/.sdkman
-bass source $HOME/.sdkman/bin/sdkman-init.sh
 
 # Set JAVA_HOME for Fish shell manually
-set -x JAVA_HOME $HOME/.sdkman/candidates/java/current
-set -x JDK_HOME $JAVA_HOME
+#set -x JAVA_HOME $HOME/.sdkman/candidates/java/current
+#set -x JDK_HOME $JAVA_HOME
 
 fish_config theme choose my
 
