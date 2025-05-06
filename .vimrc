@@ -6,8 +6,8 @@ set termguicolors
 set background=dark
 
 set autoindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set showmatch
 set autochdir
 
@@ -52,14 +52,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 call plug#begin('~/.vim/plugged')
-"Plug 'uiiaoo/java-syntax.vim'
-"Plug 'mattn/emmet-vim'
-"Plug 'vim-python/python-syntax'
 Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
-"Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
@@ -78,8 +73,3 @@ let g:ale_rust_cargo_use_clippy = 1
 
 autocmd FileType * let b:ale_enabled = 0
 autocmd FileType rust let b:ale_enabled = 1
-
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-set fileformat=unix
-autocmd BufRead,BufNewFile * setlocal fileformat=unix
