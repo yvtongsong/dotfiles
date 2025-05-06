@@ -1,11 +1,5 @@
-#Requires AutoHotkey v2
-
-#HotIf WinActive("Terminal")
-
 ^p::
 {
-    Send("^v")
+    Send ^+v  ; Send Ctrl+Shift+V to paste
 }
 return
-
-#HotIf
