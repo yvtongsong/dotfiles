@@ -2,8 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-function fish_prompt
-	printf '💩 '
+if status is-interactive
+and not set -q TMUX
+    exec tmux
 end
 
 fish_vi_key_bindings
