@@ -1,0 +1,13 @@
+[Unit]
+Description=xremap
+
+[Service]
+Type=oneshot
+KillMode=process
+ExecStart=/home/yutong/.cargo/bin/xremap /home/yutong/dotfiles/xremap/config.yml --watch
+ExecStop=/usr/bin/killall xremap
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=default.target

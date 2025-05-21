@@ -55,6 +55,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 autocmd vimenter * ++nested colorscheme gruvbox
